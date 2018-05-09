@@ -1,0 +1,1388 @@
+﻿/*Elebase 4.8.70, Build 4870
+May 9th 2018, 02:50am
+For evaluation purposes only*/
+
+/*Animations stylesheet*/
+
+/*NOTE: So that multiple animations can be played at once, animations are activated in the 'animations.js' script*/
+/*Animation states (e.g. 'play') are applied in 'style.css'*/
+
+/*------DEFAULT (1080p)-----*/
+/*Scroll down to see media query styles for different resolutions*/
+
+
+/*-----HOME PAGE ELEMENTS------*/
+
+/*Text container and characters*/
+@keyframes entrance {
+    0% {
+        transform: scale(0,0);
+    }
+
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+/*Header entrance*/
+@keyframes header-entrance {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        animation-delay: 2s;
+        transform: translateY(0px);
+    }
+}
+
+/*Header exit*/
+@keyframes header-exit {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        animation-delay: 2s;
+        transform: translateY(-100px);
+    }
+}
+
+/*Feature image*/
+@keyframes featureimage-entrance {
+    0% {
+        transform: scale(2,2);
+    }
+
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+/*Feature image call-to-action message*/
+@keyframes cta-entrance {
+    0% {
+        visibility: visible;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 0;
+    }
+}
+
+/*Speaker icon entrance*/
+@keyframes speaker-entrance {
+    0% {
+        visibility: visible;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+/*Clouds*/
+@keyframes clouds {
+    0% {
+        transform: scale(0.3,0.3);
+    }
+
+    60% {
+        transform: scale(1,1);
+    }
+
+    100% {
+        transform: scale(0.3,0.3);
+    }
+}
+
+/*Menu Buttons*/
+@keyframes jump {
+    0% {
+        transform: translateY(0px);
+    }
+
+    70% {
+        transform: translateY(-150px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/*--MONKEY--*/
+
+/*Monkey*/
+@keyframes monkey {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    33% {
+        transform: translate(-220px, -150px) rotate(180deg);
+    }
+
+    66% {
+        transform: translate(300px, -600px) rotate(90deg);
+    }
+
+    100% {
+        transform: translate(900px, -250px) rotate(360deg);
+    }
+}
+
+/*Monkey Run*/
+@keyframes monkey-run {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translate(-220px, -150px) rotate(180deg);
+    }
+}
+
+/*--LION--*/
+
+/*Also make sure 'sound.js' and 'howler.min.js' are present to activate lion roar sound*/
+
+/*Lion*/
+@keyframes lion {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(45deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(-300px);
+    }
+}
+
+/*--GIRAFFE--*/
+
+/*Giraffe*/
+@keyframes giraffe {
+    0% {
+        transform: rotateY(180deg);
+    }
+
+    50% {
+        transform: translateX(180px) rotateY(180deg);
+    }
+
+    100% {
+        transform: translate(180px, -70px) scale(1.5,1.5) rotateY(180deg);
+    }
+}
+
+@keyframes giraffe-run {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+    }
+
+    100% {
+        transform: translateX(250px);
+    }
+}
+
+/*Spin*/
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*Visible*/
+@keyframes zoom {
+    0% {
+        transform: scale(0,0);
+    }
+
+    100% {
+        transform: scale(1,1);
+    }
+}
+   
+
+
+/*-----RESPONSIVE-----*/
+
+/*--------1920px-2560px (high-res desktop, 1920px (1920x1080) is default)-----*/
+@media only screen and (min-width: 1921px) and (max-width: 2560px) {
+
+    #monkey {
+        margin-top: 30.5%;
+    }
+
+    #lion {
+        margin-top: 32%;
+    }
+
+    #giraffe {
+        margin-top: 29%;
+    }
+
+    /*--MONKEY--*/
+
+    /*Monkey*/
+    @keyframes monkey {
+        0% {
+            transform: translate(0px, 0px);
+        }
+
+        33% {
+            transform: translate(-270px, -210px) rotate(180deg);
+        }
+
+        66% {
+            transform: translate(456px, -800px) rotate(90deg);
+        }
+
+        100% {
+            transform: translate(1300px, -250px) rotate(360deg);
+        }
+    }
+
+    /*Monkey Run*/
+    @keyframes monkey-run {
+        0% {
+            transform: translateX(0px);
+        }
+
+        100% {
+            transform: translate(-270px, -210px) rotate(180deg);
+        }
+    }
+
+    /*--LION--*/
+
+    /*Also make sure 'sound.js' and 'howler.min.js' are present to activate lion roar sound*/
+
+    /*Lion*/
+    @keyframes lion {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(45deg);
+        }
+
+        50% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: translateX(-600px);
+        }
+    }
+
+    /*--GIRAFFE--*/
+
+    /*Giraffe*/
+    @keyframes giraffe {
+        0% {
+            transform: rotateY(180deg);
+        }
+
+        50% {
+            transform: translateX(280px) rotateY(180deg);
+        }
+
+        100% {
+            transform: translate(280px, -50px) scale(1.5,1.5) rotateY(180deg);
+        }
+    }
+
+    @keyframes giraffe-run {
+        0% {
+            transform: rotateY(0deg);
+        }
+
+        50% {
+            transform: rotateY(180deg);
+        }
+
+        100% {
+            transform: translateX(320px);
+        }
+    }
+}
+
+/*-----1100px-1440px (common laptop resolutions)-----*/
+@media only screen and (min-width: 1100px) and (max-width: 1440px) {
+
+    #monkey {
+        width: 110px;
+        height: 152px;
+        margin-top: 27%;
+    }
+
+    #lion {
+        width: 180px;
+        height: 118px;
+        margin-top: 29.75%;
+    }
+
+    #giraffe {
+        width: 120px;
+        height: 184px;
+        margin-top: 24.5%;
+    }
+
+    /*--MONKEY--*/
+
+    /*Monkey*/
+    @keyframes monkey {
+        0% {
+            transform: translate(0px, 0px);
+        }
+
+        33% {
+            transform: translate(-145px, -70px) rotate(180deg);
+        }
+
+        66% {
+            transform: translate(200px, -400px) rotate(90deg);
+        }
+
+        100% {
+            transform: translate(680px, -130px) rotate(360deg);
+        }
+    }
+
+    /*Monkey Run*/
+    @keyframes monkey-run {
+        0% {
+            transform: translateX(0px);
+        }
+
+        100% {
+            transform: translate(-145px, -70px) rotate(180deg);
+        }
+    }
+
+    /*--LION--*/
+
+    /*Also make sure 'sound.js' and 'howler.min.js' are present to activate lion roar sound*/
+
+    /*Lion*/
+    @keyframes lion {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(45deg);
+        }
+
+        50% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: translateX(-450px);
+        }
+    }
+
+    /*--GIRAFFE--*/
+
+    /*Giraffe*/
+    @keyframes giraffe {
+        0% {
+            transform: rotateY(180deg);
+        }
+
+        50% {
+            transform: translateX(120px) rotateY(180deg);
+        }
+
+        100% {
+            transform: translate(180px, -40px) scale(1.5,1.5) rotateY(180deg);
+        }
+    }
+
+    @keyframes giraffe-run {
+        0% {
+            transform: rotateY(0deg);
+        }
+
+        50% {
+            transform: rotateY(180deg);
+        }
+
+        100% {
+            transform: translateX(160px);
+        }
+    }
+}
+
+/*-----1000-1100px-----*/
+@media only screen and (min-width: 1000px) and (max-width: 1100px) {
+
+    #monkey {
+        width: 126px;
+        height: 155px;
+        margin-left: 29%;
+    }
+
+    #lion {
+        width: 179px;
+        height: 134px;
+    }
+
+    #giraffe {
+        width: 130px;
+        height: 173px;
+    }
+
+    #trees {
+        width: 100%;
+        height: 75%;
+        margin-left: 2%;
+    }
+
+    /*Menu Buttons*/
+    @keyframes jump {
+        0% {
+            transform: translateY(0px);
+        }
+
+        70% {
+            transform: translateY(-30px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    /*--MONKEY--*/
+
+    /*Monkey*/
+    @keyframes monkey {
+        0% {
+            transform: translate(0px, 0px);
+        }
+
+        33% {
+            transform: translate(-115px, -150px) rotate(180deg);
+        }
+
+        66% {
+            transform: translate(156px, -600px) rotate(90deg);
+        }
+
+        100% {
+            transform: translate(469px, -250px) rotate(360deg);
+        }
+    }
+
+    /*Monkey Run*/
+    @keyframes monkey-run {
+        0% {
+            transform: translateX(0px);
+        }
+
+        100% {
+            transform: translate(-115px, -150px) rotate(180deg);
+        }
+    }
+
+    /*--LION--*/
+
+    /*Also make sure 'sound.js' and 'howler.min.js' are present to activate lion roar sound*/
+
+    /*Lion*/
+    @keyframes lion {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(45deg);
+        }
+
+        50% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: translateX(-300px);
+        }
+    }
+
+    /*--GIRAFFE--*/
+
+    /*Giraffe*/
+    @keyframes giraffe {
+        0% {
+            transform: rotateY(180deg);
+        }
+
+        50% {
+            transform: translateX(180px) rotateY(180deg);
+        }
+
+        100% {
+            transform: translate(180px, -70px) scale(1.5,1.5) rotateY(180deg);
+        }
+    }
+
+    @keyframes giraffe-run {
+        0% {
+            transform: rotateY(0deg);
+        }
+
+        50% {
+            transform: rotateY(180deg);
+        }
+
+        100% {
+            transform: translateX(130px);
+        }
+    }
+
+    /*Visible*/
+    @keyframes zoom {
+        0% {
+            transform: scale(0,0);
+        }
+
+        100% {
+            transform: scale(1,1);
+        }
+    }
+}
+
+/*-----600-1000px-----*/
+/*-----iPad and most tablets-----*/
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+
+    #monkey {
+        width: 96px;
+        height: 114px;
+        margin-left: 29%;
+    }
+
+    #lion {
+        width: 128px;
+        height: 101px;
+    }
+
+    #giraffe {
+        width: 104px;
+        height: 134px;
+    }
+
+    #trees {
+        width: 100%;
+        height: 50%;
+        margin-left: 2%;
+        margin-top: 0;
+    }
+
+    #clouds {
+        margin-top: 0;
+        height: 50%;
+    }
+
+    /*--MONKEY--*/
+
+    /*Monkey*/
+    @keyframes monkey {
+        0% {
+            transform: translate(0px, 0px);
+        }
+
+        33% {
+            transform: translate(-84px, -120px) rotate(180deg);
+        }
+
+        66% {
+            transform: translate(200px, -180px) rotate(90deg);
+        }
+
+        100% {
+            transform: translate(400px, -135px) rotate(360deg);
+        }
+    }
+
+    /*Monkey Run*/
+    @keyframes monkey-run {
+        0% {
+            transform: translateX(0px);
+        }
+
+        100% {
+            transform: translate(-84px, -120px) rotate(180deg);
+        }
+    }
+
+    /*--LION--*/
+
+    /*Also make sure 'sound.js' and 'howler.min.js' are present to activate lion roar sound*/
+
+    /*Lion*/
+    @keyframes lion {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(45deg);
+        }
+
+        50% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: translateX(-300px);
+        }
+    }
+
+    /*--GIRAFFE--*/
+
+    /*Giraffe*/
+    @keyframes giraffe {
+        0% {
+            transform: rotateY(180deg);
+        }
+
+        100% {
+            transform: translate(80px, -40px) scale(1.5,1.5) rotateY(180deg);
+        }
+    }
+
+    @keyframes giraffe-run {
+        0% {
+            transform: rotateY(0deg);
+        }
+
+        50% {
+            transform: rotateY(180deg);
+        }
+
+        100% {
+            transform: translateX(100px);
+        }
+    }
+}
+
+/*-----400-600px-----*/
+/*iPhone 6/7/8 Plus, Samsung S8/S9 Plus, Google Pixel 2 XL*/
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+
+    #monkey {
+        width: 80px;
+        height: 92px;
+        margin-left: 22%;
+        margin-top: 30%;
+    }
+
+    #lion {
+        width: 102px;
+        height: 84px;
+        margin-left: 40%;
+        margin-top: 30%;
+    }
+
+    #giraffe {
+        width: 82px;
+        height: 109px;
+        margin-left: 60%;
+    }
+
+    #trees {
+        width: 100%;
+        height: 35%;
+        margin-left: 2%;
+        margin-top: 0;
+    }
+
+    #clouds {
+        margin-top: 0;
+        height: 35%;
+    }
+
+    /*--MONKEY--*/
+
+    /*Monkey*/
+    @keyframes monkey {
+        0% {
+            transform: translate(0px, 0px);
+        }
+
+        33% {
+            transform: translate(-22px, -80px) rotate(180deg);
+        }
+
+        66% {
+            transform: translate(60px, -150px) rotate(90deg);
+        }
+
+        100% {
+            transform: translate(240px, -105px) rotate(360deg);
+        }
+    }
+
+    /*Monkey Run*/
+    @keyframes monkey-run {
+        0% {
+            transform: translateX(0px);
+        }
+
+        100% {
+            transform: translate(-22px, -80px) rotate(180deg);
+        }
+    }
+
+    /*--LION--*/
+
+    /*Also make sure 'sound.js' and 'howler.min.js' are present to activate lion roar sound*/
+
+    /*Lion*/
+    @keyframes lion {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(45deg);
+        }
+
+        50% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: translateX(-150px);
+        }
+    }
+
+    /*--GIRAFFE--*/
+
+    /*Giraffe*/
+    @keyframes giraffe {
+        0% {
+            transform: rotateY(180deg);
+        }
+
+        100% {
+            transform: translateY(-30px) scale(1.3,1.3) rotateY(180deg);
+        }
+    }
+
+    @keyframes giraffe-run {
+        0% {
+            transform: rotateY(0deg);
+        }
+
+        50% {
+            transform: rotateY(180deg);
+        }
+
+        100% {
+            transform: translateX(50px);
+        }
+    }
+}
+
+/*-----Up to 400px-----*/
+/*-----Most smartphones!*/
+@media only screen and (max-width: 400px) {
+
+    #monkey {
+        width: 60px;
+        height: 72px;
+        margin-left: 26%;
+        margin-top: 34%;
+    }
+
+    #lion {
+        width: 82px;
+        height: 64px;
+        margin-top: 36%;
+    }
+
+    #giraffe {
+        width: 62px;
+        height: 89px;
+        margin-left: 66%;
+        margin-top: 30%;
+    }
+
+    #trees {
+        width: 100%;
+        height: 40%;
+        margin-left: 2%;
+    }
+
+    #clouds {
+        margin-top: 0;
+        height: 35%;
+    }
+
+    /*--MONKEY--*/
+
+    /*Monkey*/
+    @keyframes monkey {
+        0% {
+            transform: translate(0px, 0px);
+        }
+
+        33% {
+            transform: translate(-22px, -25px) rotate(180deg);
+        }
+
+        66% {
+            transform: translate(60px, -150px) rotate(90deg);
+        }
+
+        100% {
+            transform: translate(200px, -75px) rotate(360deg);
+        }
+    }
+
+    /*Monkey Run*/
+    @keyframes monkey-run {
+        0% {
+            transform: translateX(0px);
+        }
+
+        100% {
+            transform: translate(-32px, -55px) rotate(180deg);
+        }
+    }
+
+    /*--LION--*/
+
+    /*Also make sure 'sound.js' and 'howler.min.js' are present to activate lion roar sound*/
+
+    /*Lion*/
+    @keyframes lion {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(45deg);
+        }
+
+        50% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: translateX(-150px);
+        }
+    }
+
+    /*--GIRAFFE--*/
+
+    /*Giraffe*/
+    @keyframes giraffe {
+        0% {
+            transform: rotateY(180deg);
+        }
+
+        100% {
+            transform: translateY(-25px) scale(1.4,1.4) rotateY(180deg);
+        }
+    }
+
+    @keyframes giraffe-run {
+        0% {
+            transform: rotateY(0deg);
+        }
+
+        50% {
+            transform: rotateY(180deg);
+        }
+
+        100% {
+            transform: translateX(50px);
+        }
+    }
+}
+
+
+/*-----LANDSCAPE-----*/
+
+/*iPad and most tablets*/
+@media only screen and (min-width: 1000px) and (max-width: 1100px) and (orientation: landscape) {
+
+    /*--MONKEY--*/
+
+    /*Monkey*/
+    @keyframes monkey {
+        0% {
+            transform: translate(0px, 0px);
+        }
+
+        33% {
+            transform: translate(-110px, -120px) rotate(180deg);
+        }
+
+        66% {
+            transform: translate(200px, -180px) rotate(90deg);
+        }
+
+        100% {
+            transform: translate(550px, -145px) rotate(360deg);
+        }
+    }
+
+    /*Monkey Run*/
+    @keyframes monkey-run {
+        0% {
+            transform: translateX(0px);
+        }
+
+        100% {
+            transform: translate(-110px, -120px) rotate(180deg);
+        }
+    }
+
+    /*--LION--*/
+
+    /*Also make sure 'sound.js' and 'howler.min.js' are present to activate lion roar sound*/
+
+    /*Lion*/
+    @keyframes lion {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(45deg);
+        }
+
+        50% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: translateX(-400px);
+        }
+    }
+
+    /*--GIRAFFE--*/
+
+    /*Giraffe*/
+    @keyframes giraffe {
+        0% {
+            transform: rotateY(180deg);
+        }
+
+        100% {
+            transform: translate(80px, -40px) scale(1.5,1.5) rotateY(180deg);
+        }
+    }
+
+    @keyframes giraffe-run {
+        0% {
+            transform: rotateY(0deg);
+        }
+
+        50% {
+            transform: rotateY(180deg);
+        }
+
+        100% {
+            transform: translateX(100px);
+        }
+    } 
+}
+
+/*iPhone 6/7/8 Plus*/
+@media only screen and (min-width: 700px) and (max-width: 1000px) and (orientation: landscape) {
+    #monkey {
+        width: 110px;
+        height: 152px;
+        margin-left: 22%;
+        margin-top: 33%;
+    }
+
+    #lion {
+        width: 190px;
+        height: 124px;
+        margin-left: 40%;
+        margin-top: 36%;
+    }
+
+    #giraffe {
+        width: 112px;
+        height: 172px;
+        margin-left: 65%;
+        margin-top: 30%;
+    }
+
+    #trees {
+        width: 100%;
+        height: 100%;
+        margin-left: 2%;
+        margin-top: 0;
+    }
+
+    #clouds {
+        margin-top: 0;
+        height: 100%;
+    }
+
+    /*--MONKEY--*/
+
+    /*Monkey*/
+    @keyframes monkey {
+        0% {
+            transform: translate(0px, 0px);
+        }
+
+        33% {
+            transform: translate(-32px, -170px) rotate(180deg);
+        }
+
+        66% {
+            transform: translate(110px, -300px) rotate(90deg);
+        }
+
+        100% {
+            transform: translate(420px, -195px) rotate(360deg);
+        }
+    }
+
+    /*Monkey Run*/
+    @keyframes monkey-run {
+        0% {
+            transform: translateX(0px);
+        }
+
+        100% {
+            transform: translate(-32px, -170px) rotate(180deg);
+        }
+    }
+
+    /*--LION--*/
+
+    /*Also make sure 'sound.js' and 'howler.min.js' are present to activate lion roar sound*/
+
+    /*Lion*/
+    @keyframes lion {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(45deg);
+        }
+
+        50% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: translateX(-240px);
+        }
+    }
+
+    /*--GIRAFFE--*/
+
+    /*Giraffe*/
+    @keyframes giraffe {
+        0% {
+            transform: rotateY(180deg);
+        }
+
+        100% {
+            transform: translate(20px, -70px) scale(1.4,1.4) rotateY(180deg);
+        }
+    }
+
+    @keyframes giraffe-run {
+        0% {
+            transform: rotateY(0deg);
+        }
+
+        50% {
+            transform: rotateY(180deg);
+        }
+
+        100% {
+            transform: translateX(100px);
+        }
+    }
+}
+
+/*iPhone 6/7/8*/
+@media only screen and (min-width: 600px) and (max-width: 700px) and (orientation: landscape) {
+    #monkey {
+        width: 110px;
+        height: 152px;
+        margin-left: 22%;
+        margin-top: 33%;
+    }
+
+    #lion {
+        width: 190px;
+        height: 124px;
+        margin-left: 40%;
+        margin-top: 36%;
+    }
+
+    #giraffe {
+        width: 112px;
+        height: 172px;
+        margin-left: 65%;
+        margin-top: 30%;
+    }
+
+    #trees {
+        width: 100%;
+        height: 100%;
+        margin-left: 2%;
+        margin-top: 0;
+    }
+
+    #clouds {
+        margin-top: 0;
+        height: 100%;
+    }
+
+    /*--MONKEY--*/
+
+    /*Monkey*/
+    @keyframes monkey {
+        0% {
+            transform: translate(0px, 0px);
+        }
+
+        33% {
+            transform: translate(-32px, -165px) rotate(180deg);
+        }
+
+        66% {
+            transform: translate(110px, -300px) rotate(90deg);
+        }
+
+        100% {
+            transform: translate(390px, -175px) rotate(360deg);
+        }
+    }
+
+    /*Monkey Run*/
+    @keyframes monkey-run {
+        0% {
+            transform: translateX(0px);
+        }
+
+        100% {
+            transform: translate(-32px, -165px) rotate(180deg);
+        }
+    }
+
+    /*--LION--*/
+
+    /*Also make sure 'sound.js' and 'howler.min.js' are present to activate lion roar sound*/
+
+    /*Lion*/
+    @keyframes lion {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(45deg);
+        }
+
+        50% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: translateX(-210px);
+        }
+    }
+
+    /*--GIRAFFE--*/
+
+    /*Giraffe*/
+    @keyframes giraffe {
+        0% {
+            transform: rotateY(180deg);
+        }
+
+        100% {
+            transform: translate(20px, -70px) scale(1.7,1.7) rotateY(180deg);
+        }
+    }
+
+    @keyframes giraffe-run {
+        0% {
+            transform: rotateY(0deg);
+        }
+
+        50% {
+            transform: rotateY(180deg);
+        }
+
+        100% {
+            transform: translateX(100px);
+        }
+    }
+}
+
+/*iPhone 5/SE*/
+@media only screen and (min-width: 500px) and (max-width: 600px) and (orientation: landscape) {
+    #monkey {
+        width: 90px;
+        height: 125px;
+        margin-left: 22%;
+        margin-top: 33%;
+    }
+
+    #lion {
+        width: 160px;
+        height: 105px;
+        margin-left: 40%;
+        margin-top: 36%;
+    }
+
+    #giraffe {
+        width: 92px;
+        height: 141px;
+        margin-left: 65%;
+        margin-top: 30%;
+    }
+
+    #trees {
+        width: 100%;
+        height: 100%;
+        margin-left: 2%;
+        margin-top: 0;
+    }
+
+    #clouds {
+        margin-top: 0;
+        height: 100%;
+    }
+
+    /*--MONKEY--*/
+
+    /*Monkey*/
+    @keyframes monkey {
+        0% {
+            transform: translate(0px, 0px);
+        }
+
+        33% {
+            transform: translate(-26px, -140px) rotate(180deg);
+        }
+
+        66% {
+            transform: translate(110px, -250px) rotate(90deg);
+        }
+
+        100% {
+            transform: translate(320px, -155px) rotate(360deg);
+        }
+    }
+
+    /*Monkey Run*/
+    @keyframes monkey-run {
+        0% {
+            transform: translateX(0px);
+        }
+
+        100% {
+            transform: translate(-26px, -140px) rotate(180deg);
+        }
+    }
+
+    /*--LION--*/
+
+    /*Also make sure 'sound.js' and 'howler.min.js' are present to activate lion roar sound*/
+
+    /*Lion*/
+    @keyframes lion {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(45deg);
+        }
+
+        50% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: translateX(-210px);
+        }
+    }
+
+    /*--GIRAFFE--*/
+
+    /*Giraffe*/
+    @keyframes giraffe {
+        0% {
+            transform: rotateY(180deg);
+        }
+
+        100% {
+            transform: translate(20px, -40px) scale(1.6,1.6) rotateY(180deg);
+        }
+    }
+
+    @keyframes giraffe-run {
+        0% {
+            transform: rotateY(0deg);
+        }
+
+        50% {
+            transform: rotateY(180deg);
+        }
+
+        100% {
+            transform: translateX(70px);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

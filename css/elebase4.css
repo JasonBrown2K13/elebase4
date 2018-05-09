@@ -1,0 +1,447 @@
+﻿/*Elebase 4.8.70, Build 4870
+May 9th 2018, 02:50am
+For evaluation purposes only*/
+
+/*Font*/
+
+@font-face {
+    font-family: "ProximaSoft";
+    src: url(../fonts/ProximaSoft.otf) format('opentype');
+    src: url(../fonts/ProximaSoft.ttf) format('truetype');
+    src: url(../fonts/ProximaSoft.eot) format('embedded opentype');
+    src: url(../fonts/ProximaSoft.woff) format('woff');
+    src: url(../fonts/ProximaSoft.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: "ProximaSemibold";
+    src: url(../fonts/ProximaSoftSemibold.otf) format('opentype');
+    src: url(../fonts/ProximaSoftSemibold.ttf) format('truetype');
+    src: url(../fonts/ProximaSoftSemibold.eot) format('embedded opentype');
+    src: url(../fonts/ProximaSoftSemibold.woff) format('woff');
+    src: url(../fonts/ProximaSoftSemibold.woff2) format('woff2');
+}
+
+/*Body styling*/
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/*---Font and formatting properties---*/
+
+h1, h2, h3 {
+    font-family: ProximaSemibold, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 45px;
+    line-height: 45px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+c1 { /*figure caption, to be used inside <figcaption> tags*/
+    font-family: ProximaSemibold, Arial, Helvetica, sans-serif; 
+    font-size: 25px;
+}
+
+f1 { /*footer styling*/
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p1 { /*default paragraph*/
+    font-family: ProximaSoft, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+fi1 { /*hero image call-to-action*/
+    font-family: ProximaSoftSemibold, Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    color: white;
+}
+
+/*---Element styling---*/
+
+.img-full {
+    width: 100%;
+}
+
+#container { /*container that holds all elements of the website*/
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#header { /*header area which contains buttons (desktop only) and logo*/
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    background-color: rgba(0,0,0,.5);
+    z-index: 4;
+    animation-delay: 2s;
+    animation: header-entrance 1.5s;
+}
+
+#header.header-hide {
+    animation: header-exit .3s linear forwards;
+}
+
+#logo { /*logo styling*/
+    padding: 1% 1% 1% 1%;
+    position: relative;
+    height: 70%;
+    width: auto;
+}
+
+.menu { /*class to hold the menu buttons on the desktop website*/
+    top: 0;
+    margin-top: 1.25%;
+    margin-right: 2.5%;
+    float: right;
+}
+
+.button { /*default button class styling*/
+    background-color: #aed2a7;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+}
+
+button:focus { /*remove outline from buttons in certain browsers (Google Chrome)*/
+    outline: 0;
+}
+
+.button.rollover { /*styles for button hover - added as a class in 'animations.js'*/
+    background-color: #fbc477;
+    transition: .3s;
+    font-size: 18px;
+}
+
+.menu-button { /*styling for the buttons in the menu (desktop only)*/
+    background-color: transparent;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 160px;
+    border: none;
+    outline: none;
+}
+
+menu-button:focus { /*remove outline from buttons in certain browsers (Google Chrome)*/
+    outline: 0;
+}
+
+.menu-button:hover { /*styles for menu button hover (desktop only)*/
+    background-color: #fbc477;
+    transition: .3s;
+    font-size: 18px;
+}
+
+.current { /*class added to the button to signify that it is the button for the current page*/
+    background-color: #fbc477;
+}
+
+#hero { /*styling for the feature image on each page (image directly underneath the header)*/
+    width: 100%;
+    height: 30%;
+    z-index: 1;
+    animation: featureimage-entrance 1s;
+}
+
+#hero-cta { /*div containing the 'Click on the animals' text in the feature image*/
+    position: absolute;
+    visibility: hidden; /*visibility is activated in entrance animation*/
+    text-align: center;
+    top: 0;
+    margin-top: 7%;
+    width: 100%;
+    height: 100%;
+    animation: cta-entrance 30s forwards;
+    animation-delay: 2s;
+}
+
+    #hero-cta.text-styling { /*hero image call-to-action*/
+        font-family: ProximaSoftSemibold, Arial, Helvetica, sans-serif;
+        font-size: 35px;
+        color: white;
+}
+
+#speaker, #speaker-cross { /*speaker and speaker cross image - user clicks to toggle sound*/
+    position: absolute;
+    visibility: hidden; /*visibility is activated in entrance animation*/
+    top: 0;
+    right: 40px;
+    margin-top: 6%;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    animation: speaker-entrance 1s forwards;
+    animation-delay: 3s;
+    cursor: pointer;
+}
+
+    #speaker-cross:hover {
+        filter: invert(0.5);
+        transition: .3s;
+    }
+
+    #speaker-cross.active {
+        filter: opacity(0); /*reduce opacity rather than hide so that the element is still clickable even if it is not visible*/
+        transition: .3s;
+    }
+
+#clouds, #trees {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+#clouds {
+    transform: scale(0.3,0.3);
+}
+
+#trees {
+    left: 0;
+    margin-top: 5%;
+    transform: scale(0,0);
+}
+
+#clouds.clouds-play {
+    animation: clouds 45s infinite;
+}
+
+#trees.trees-zoom {
+    animation: zoom 1s forwards;
+    animation-delay: 1s;
+}
+
+#monkey, #lion, #giraffe { /*styling for the characters on the home page*/
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    animation: zoom 1s linear forwards;
+}
+
+#monkey {
+    margin-top: 28%;
+    margin-left: 33%;
+}
+
+#monkey.monkey-play {
+    animation: monkey 6s forwards;
+}
+
+    #monkey.monkey-run {
+        animation: monkey-run 2s forwards;
+        animation-delay: 1.5s;
+    }
+
+    #monkey.jump { /*character jumping when menu buttons rolled over*/
+        animation: jump 1s linear forwards;
+    }
+
+#lion {
+    margin-top: 30%;
+    margin-left: 43%;
+}
+
+#lion.lion-play {
+    animation: lion 3s forwards;
+}
+
+#lion.jump { /*character jumping when menu buttons rolled over*/
+    animation: jump 1s linear forwards;
+}
+
+#giraffe {
+    margin-top: 26%;
+    margin-left: 58%;
+}
+
+#giraffe.giraffe-play {
+    animation: giraffe 6s forwards;
+}
+
+#giraffe.giraffe-run {
+    animation: giraffe-run 2s forwards;
+    animation-delay: 1s;
+}
+
+    #giraffe.jump { /*character jumping when menu buttons rolled over*/
+        animation: jump 1s linear forwards;
+    }
+
+#textcontainer { /*styling for the container that holds just the text and assets such as Siema slideshows*/
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin-top: -21%;
+    width: 75%;
+    background-color: white;
+    border-radius: 45px 45px 0px 0px;
+    z-index: 1;
+    padding: 2% 2% 2% 2%;
+    text-align: left;
+    line-height: 33px;
+    animation: entrance 1s;
+}
+
+#groups-buttons { /*styling for the buttons on the groups page (centre the buttons inside the 'textcontainer' div)*/
+    position: relative;
+    text-align: center;
+}
+
+/*---Slideshow---*/
+
+/*Siema slideshows, can add more classes to this if more slideshows are required*/
+.siema, .siema1, .siema2, .siema3, .siema4, .siema5 { /*siema = Home, siema1 = Courtyard, siema2 = Nature Garden, siema3 = Mini Monkeys, siema4 = Little Lions, siema5 = Jolly Giraffes*/
+    width: 100%;
+}
+
+.siemaimg { /*styling for the image in the Siema slideshow (they're all the same for each slideshow)*/
+    width: 100%;
+}
+
+.slideshow {
+    position: relative;
+}
+
+.prev, .next { /*previous and next buttons on the slideshows*/
+    background: rgba(174,210,167,.8);
+    position: absolute;
+    width: 40px;
+    height: 80px;
+    top: 0;
+    margin-top: 30%;
+    border: none;
+    cursor: pointer;
+    transition: all .25s;
+    font-size: 35px;
+    font-family: ProximaSoft;
+    font-weight: bold;
+}
+
+.prev {
+    border-radius: 0px 45px 45px 0px;
+}
+
+.next {
+    right: 0;
+    border-radius: 45px 0px 0px 45px;
+}
+
+    .prev:hover, .next:hover {
+        background: rgba(251,196,119,.95);
+    }
+
+.dot-buttons {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 50%;
+}
+
+#slideshow-button { /*dot buttons at the bottom of the slideshow*/
+    border: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #aed2a7;
+    margin: 20px;
+}
+
+    #slideshow-button:hover {
+        background-color: #fbc477;
+    }
+
+    #slideshow-button:active {
+        background-color: #fbc477;
+    }
+
+/*-----------*/
+
+/*See Tiles stylesheet for tile styling*/
+
+/*---Responsive bottom menu---*/
+
+.bottommenu { /*Visible only on mobile devices and low screen resolutions*/
+    visibility: hidden; /*Visible only on media query on mobile devices*/
+    text-align: center;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 60%;
+    background-color: #aed2a7;
+    z-index: 1001;
+    bottom: 0;
+    border-top-right-radius: 500px;
+    border-top-left-radius: 500px;
+}
+
+.hamburger { /*Visible only on mobile devices and low screen resolutions*/
+    position: fixed;
+    width: 100%;
+    padding-top: 30px;
+    border-radius: 45px 45px 0px 0px;
+    text-align: left;
+    bottom: 0;
+    background-color: white;
+    border-style: solid;
+    border-color: #fbc477;
+    border-width: 3px;
+    z-index: 1;
+    visibility: hidden;
+}
+
+/*---Footer---*/
+
+#footer { /*styling for the footer*/   
+    position: relative;
+    z-index: 1;
+}
+
+#footerimage { /*styling for the image in the footer area*/
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+#footertext { /*styling for the text in the footer area*/
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}

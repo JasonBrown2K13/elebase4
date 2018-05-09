@@ -1,0 +1,247 @@
+﻿<!--Elebase 4.8.70, Build 4870
+May 9th 2018, 02:50am
+For evaluation purposes only-->
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <title>Home | Nellie's Nursery</title>
+
+    <!--Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="assets/icons/site.webmanifest">
+    <link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="assets/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--Scripts-->
+    <link rel="stylesheet" type="text/css" href="css/elebase4.css">
+    <link rel="stylesheet" type="text/css" href="css/preloader.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/tiles.css" />
+    <link rel="stylesheet" type="text/css" href="css/animations.css" />
+    <script src="js/ie.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/filecheck.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/preloader.js"></script>
+    <script src="js/hamburger.js"></script>
+    <script src="js/menuhide.js"></script>
+    <script src="js/howler.min.js"></script>
+    <script src="js/sound.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/vibrate.min.js"></script>
+    <script src="js/headerhide.js"></script>
+    <script src="js/siema.min.js"></script>
+    <script src="js/siema-pagination.js"></script>
+
+    <!--Preload-->
+    <!--Images-->
+    <link rel="preload" href="assets/featureimage2.jpg" as="image" />
+    <link rel="preload" href="assets/logo2.png" as="image" />
+    <link rel="preload" href="assets/monkey.png" as="image" />
+    <link rel="preload" href="assets/giraffe.png" as="image" />
+    <link rel="preload" href="assets/lion.png" as="image" />
+    <link rel="preload" href="assets/clouds.png" as="image" />
+    <link rel="preload" href="assets/footer.png" as="image" />
+    <link rel="preload" href="assets/trees.png" as="image" />
+    <link rel="preload" href="assets/images/image02.jpg" as="image" />
+    <link rel="preload" href="assets/images/image03.jpg" as="image" />
+    <link rel="preload" href="assets/images/image08.jpg" as="image" />
+    <link rel="preload" href="assets/images/image17.jpg" as="image" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-117607996-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!--Change button colour on active page-->
+    <script>
+        $(document).ready(function () {
+            $('#home').addClass("current");
+            $('#home-mobile').addClass("current");
+
+            $(".hamburger").hide();
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+    <!--Container-->
+    <div id="container">
+        <!--Header-->
+        <div id="header">
+            <img id="logo" src="assets/logo2.png" />
+            <div class="menu">
+                <button class="button" id="home">Home</button>
+                <button class="button" id="daytoday">Day-To-Day</button>
+                <button class="button" id="groups">Nursery Groups</button>
+                <button class="button" id="team">Meet The Team</button>
+                <button class="button" id="parents">Parents' Area</button>
+                <button class="button" id="contact">Contact Us</button>
+            </div>
+        </div>
+
+        <!--Feature image-->
+        <div id="featureimage">
+            <img id="hero" src="assets/featureimage2.jpg" />
+            <img id="clouds" src="assets/clouds.png" />
+            <img id="trees" src="assets/trees.png" />
+            <img id="speaker" src="assets/icons/speaker.png" />
+            <img id="speaker-cross" src="assets/icons/speaker-cross.png" />
+
+            <!--Characters-->
+            <img id="monkey" src="assets/monkey.png" />
+            <img id="lion" src="assets/lion.png" />
+            <img id="giraffe" src="assets/giraffe.png" />
+
+            <!--Call-to-action-->
+            <div id="hero-cta">
+                <fi1>Click or tap on the animals!</fi1>
+            </div>
+        </div>
+
+        <!--Text container-->
+        <div id="textcontainer">
+            <h1>A warm welcome</h1>
+            <p1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus in odio eu dignissim. Ut volutpat, metus vitae porta placerat, ante felis tristique mi, id imperdiet arcu ante ac ante. Maecenas justo ante, gravida eget maximus nec, tempor in mi. Mauris euismod eu felis in varius. Nunc pretium sapien ac felis tristique dignissim. Aliquam erat volutpat. In hac habitasse platea dictumst. Suspendisse consectetur dapibus justo, a mattis lectus volutpat a. Morbi porttitor, eros sed tristique imperdiet, nisl metus dignissim leo, at feugiat ligula purus sit amet lectus.</p1>
+            <h1>At a glance</h1>
+            <p1>Nullam elementum tincidunt arcu, nec aliquet dolor viverra ac. Sed nulla mi, ullamcorper vitae convallis et, feugiat eu augue. Pellentesque lacus eros, pharetra non urna nec, gravida bibendum neque. Mauris posuere neque faucibus tortor ullamcorper finibus. Fusce commodo pulvinar magna ut bibendum. Donec consectetur urna vel mollis lacinia. Suspendisse tincidunt eleifend ligula et semper. Duis eleifend, eros eget tempus faucibus, arcu leo tempus est, at bibendum augue dui et urna.</p1>
+            <br />
+            <br />
+
+            <!--Siema slideshow-->
+            <div class="slideshow">
+                <!--Slides-->
+                <div class="siema siemaimg">
+                    <div><img class="siemaimg" src="assets/images/image02.jpg" /></div>
+                    <div><img class="siemaimg" src="assets/images/image03.jpg" /></div>
+                    <div><img class="siemaimg" src="assets/images/image17.jpg" /></div>
+                    <div><img class="siemaimg" src="assets/images/image08.jpg" /></div>
+                </div>
+                <!--Buttons-->
+                <button class="prev" id="homePagePrev">&lt;</button>
+                <button class="next" id="homePageNext">&gt;</button>
+                <!--Dot buttons-->
+                <div class="dot-buttons" id="homeButtons"><!--dot buttons generated by JavaScript go in here--></div>
+            </div>
+            <br />
+
+            <!--Slideshow script-->
+            <script>
+                //Slideshow
+                const homeSlideshow = new Siema(); //Home Page
+
+                //Butons
+                //Home Page
+                const homePrev = document.querySelector('.prev');
+                const homeNext = document.querySelector('.next');
+                homePrev.addEventListener('click', () => homeSlideshow.prev());
+                homeNext.addEventListener('click', () => homeSlideshow.next());
+
+                // Trigger pagination creator
+                homeSlideshow.addPagination('homeButtons');
+            </script>
+
+            <!--Text-->
+            <p1>Aliquam blandit sapien est, eget eleifend ante mollis vitae. Etiam blandit massa venenatis tincidunt mollis. Aliquam in turpis rhoncus, placerat neque lacinia, varius odio. Curabitur at leo scelerisque, vehicula nibh eget, finibus velit. Aenean suscipit massa enim, sit amet pretium nibh sollicitudin nec. Ut odio nunc, convallis non sem a, suscipit porta risus. Quisque tempus eleifend ipsum, nec faucibus lectus mollis ac. Nulla sit amet imperdiet ipsum. Donec a rhoncus orci. Quisque nec justo varius, sagittis ex vel, aliquam urna. Ut lacus lectus, iaculis et varius et, malesuada vel mauris. Integer eget auctor odio. Aenean malesuada interdum sapien, nec condimentum nulla gravida id. Vivamus faucibus magna blandit imperdiet suscipit.</p1>
+            <br />
+            <br />
+            <p1>Aliquam blandit sapien est, eget eleifend ante mollis vitae. Etiam blandit massa venenatis tincidunt mollis. Aliquam in turpis rhoncus, placerat neque lacinia, varius odio. Curabitur at leo scelerisque, vehicula nibh eget, finibus velit. Aenean suscipit massa enim, sit amet pretium nibh sollicitudin nec. Ut odio nunc, convallis non sem a, suscipit porta risus. Quisque tempus eleifend ipsum, nec faucibus lectus mollis ac. Nulla sit amet imperdiet ipsum. Donec a rhoncus orci. Quisque nec justo varius, sagittis ex vel, aliquam urna. Ut lacus lectus, iaculis et varius et, malesuada vel mauris. Integer eget auctor odio. Aenean malesuada interdum sapien, nec condimentum nulla gravida id. Vivamus faucibus magna blandit imperdiet suscipit.</p1>
+            <br />
+            <br />
+
+            <!--Tiles-->
+            <div class="tile-container">
+                <div class="tile green">
+                    <h1>Sessions</h1>
+                    <p1>Nellie's is open 51 weeks of the year, Monday to Friday from 7.30am to 6.30pm (closed for a week between Christmas and New Year and all bank holidays).</p1>
+                    <p1>Full day 8am - 6pm</p1>
+                    <p1>Extended day 7.30am - 6.30pm</p1>
+                    <p1>Morning 8am - 1pm</p1>
+                    <p1>Afternoon 1pm - 6pm</p1>
+                </div>
+
+                <div class="tile yellow">
+                    <h1>Your child at the heart</h1>
+                    <p1>The child is at the heart of all that we do and we are committed to ensuring that they can achieve their full potential, thus we have 3 purposeful and stimulating rooms containing age appropriate, multi-sensory and challenging resources.</p1>
+                    <p1>Our Mini Monkey room caters for babies and toddlers from 3 months to 2 years old, the Little Lions room is for 2-3 year olds, and the Jolly Giraffes room is for children from 3-5 years. For more information on the rooms at Nellie's, please go to the Nursery Rooms section of our website.</p1>
+                    <p1>Our care and education is based on the Early Years Foundation Stage framework.</p1>
+                </div>
+
+                <div class="tile green">
+                    <h1>Come and visit!</h1>
+                    <p1>​To arrange a visit to look round Nellie's Nursery or to request a copy of our welcome pack, please contact us.</p1>
+                </div>
+
+                <div class="tile yellow">
+                    <h1>What our parents say</h1>
+                    <p1>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac ante commodo, commodo ex ac, molestie urna. Donec blandit mattis ligula, nec fermentum odio feugiat eget. Vestibulum posuere felis ut rhoncus fermentum."</p1>
+                    <br />
+                    <p1>"Cras nec dui nec quam rutrum aliquam. Pellentesque a velit nunc. Cras non tellus nisl. Nunc in justo ut elit laoreet dapibus."</p1>
+                    <br />
+                    <p1>"Fusce ipsum est, gravida eget viverra quis, condimentum nec orci. Integer ut imperdiet odio, eu malesuada sem. Phasellus non eros vitae arcu posuere fermentum et sed quam."</p1>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div id="footer">
+            <f1 id="footertext">2018 Nellie's Nursery</f1>
+            <img id="footerimage" src="assets/footer.png" />
+        </div>
+    </div>
+
+    <!--Bottom menu (responsive only)-->
+    <div class="bottommenu">
+        <button class="menu-button" id="home-mobile"><img src="assets/home.png" height="35px" /> </button>
+        <button class="menu-button" id="menu-mobile"><img src="assets/menu.png" height="35px" /></button>
+        <button class="menu-button" id="contact-mobile"><img src="assets/contact.png" height="35px" /></button>
+    </div>
+
+    <!--Hamburger menu (responsive only)-->
+    <div class="hamburger">
+        <button class="button" id="daytoday-mobile">Day-To-Day</button>
+        <br />
+        <button class="button" id="groups-mobile">Nursery Groups</button>
+        <br />
+        <button class="button" id="team-mobile">Meet The Team</button>
+        <br />
+        <button class="button" id="parents-mobile">Parents' Area</button>
+        <br />
+        <button class="button" id="contact-mobile">Contact Us</button>
+    </div>
+
+    <!-- Preloader -->
+    <script type="text/javascript">
+        //<![CDATA[
+        $(window).on('load', function () { // makes sure the whole site is loaded
+            $('#status').fadeOut(); // will first fade out the loading animation
+            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+            $('body').delay(350).css({ 'overflow': 'visible' });
+        })
+                                    //]]>
+    </script>
+
+</body>
+</html>
