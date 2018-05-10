@@ -14,7 +14,7 @@ Elements of the code are server-dependant and will not function unless run from 
 
 If you run this prototype from a local source, the browser will display a message informing you that some features will not be available. Please click 'OK' to these messages to continue running the site from a local source. Ideally use a local server or a web server to run this prototype. 
 
-Please also unsure that you download all of the files - if any are missing the browser will display a message informing you that files are missing or damaged. Clicking 'OK' will continue to load the prototype, but it may not run as expected due to missing or damaged crticial files. 
+Please also make sure that you download all of the files - if any are missing the browser will display a message informing you that files are missing or damaged. Clicking 'OK' will continue to load the prototype, but it may not run as expected due to missing or damaged crticial files. 
 
 ## Compatibility
 Believed to be compatible with all modern browsers and all modern hardware. 'Modern' referring to software and hardware that is supported by the manufacturer. 
