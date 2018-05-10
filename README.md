@@ -1,9 +1,10 @@
-# Elebase 4
+# Elebase 4 (Build 4870)
 The fourth prototype of the Nellie's Nursery website.
 
 Version: Elebase 4.8.70, Build 4870
 Framework: Elebase
 Compiled: 09/05/2018, 02:50am
+Analytics enabled? YES
 
 ## Instructions
 
